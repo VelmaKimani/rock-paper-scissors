@@ -7,18 +7,20 @@
   }
 
   body {
-    background-color: purple;
+    background-color:#05515e;
     max-height: 100vh;
   }
 
   header {
     margin-top: 10px;
     margin-bottom: 10px;
+    
   }
 
   h1 {
-    color: #f9f6f6;
+    color: #f5f0f0;
     text-align: center;
+    padding: 80px;
   }
   h2 {
     color: #f9f6f6;
@@ -220,6 +222,58 @@
     margin-top: 100px;
   }
   
+  .log-ons{
+    text-align: center;
+    padding: 0px;
+    font-size:large;
+    font-family: sans-serif;
+  
+  }
+
+  .button1{
+    background-color: #fffcfc;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: xx-large;
+  }
+
+  .button2{
+    background-color: #ffffff;
+    padding:10px;
+    font-size: xx-large;
+
+  }
+
+  form.labels{
+    text-align: center;
+    padding: 0px;
+    color: #000000;
+    
+  }
+  
+
+  .labels1{
+   font-size: xx-large;
+   
+  }
+
+
+  .labels2{
+   
+    font-size: xx-large;
+  }
+
+  .buttonsubmit{
+    margin-top: 50px;
+    margin-bottom:50px;
+    font-size: xx-large;
+
+  }
+
+
+
+
 
 
 /* body {

@@ -25,9 +25,11 @@ const LoginPage: React.FC = () => {
   return (
     <div>
       <h1>Log Into Your Account</h1>
-      <form>
+      
+      <form className="labels">
         <div>
-          <label>Email: </label>
+          <label className="labels1">Email: </label>
+
           <input
             type="text"
             value={email}
@@ -35,8 +37,10 @@ const LoginPage: React.FC = () => {
             id=""
           />
         </div>
+
         <div>
-          <label>Password: </label>
+          <label className="labels2">Password: </label>
+
           <input
             type="password"
             value={password}
@@ -44,7 +48,8 @@ const LoginPage: React.FC = () => {
             id=""
           />
         </div>
-        <button type="button" onClick={() => logInUser()}>
+
+        <button className="buttonsubmit" type="button" onClick={() => logInUser()}>
           Submit
         </button>
       </form>

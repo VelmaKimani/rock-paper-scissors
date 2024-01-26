@@ -201,15 +201,22 @@ const LandingPage: React.FC = () => {
           <button id="logout" type="button" className="btn btn-primary btn-lg" onClick={logoutUser}>Logout</button> 
         </div> 
       ) : (
-        <div>
-          <p>You are not logged in</p>
+
+        <div className="log-ons">
+          <h1>You are not logged in</h1>
           <div>
+            <div>
             <a href="/login">
-              <button>Login</button>
+              <button className="button1">Login</button>
             </a>
+            </div>
+
+            <div>
             <a href="/register">
-              <button>Register</button>
+              <button className="button2">Register</button>
             </a>
+            </div>
+
           </div>
         </div>
       )}
