@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import httpClient from "../httpClient";
 
 const LoginPage: React.FC = () => {
@@ -23,34 +24,29 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Log Into Your Account</h1>
-      
-      <form className="labels">
+    <div className="intro">
+      <p>Log Into Your Account</p>
+      <form>
         <div>
-          <label className="labels1">Email: </label>
-
+          <label>Email: </label>
           <input
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            id=""
+            className="email"
           />
         </div>
-
         <div>
-          <label className="labels2">Password: </label>
-
+          <label>Password: </label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            id=""
+            className="password"
           />
         </div>
-
-        <button className="buttonsubmit" type="button" onClick={() => logInUser()}>
-          Submit
+        <button className="login-button" type="button" onClick={() => logInUser()}>
+          Login
         </button>
       </form>
     </div>

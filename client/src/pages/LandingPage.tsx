@@ -23,30 +23,6 @@ const LandingPage: React.FC = () => {
     })();
   }, []);
 
-
-  //  const [result, setResult] = useState<GameResult | null>(null);
-  // const [computerChoice, setComputerChoice] = useState<string>('');
-
-  // const playGame = async (playerChoice: string) => {
-  //   try {
-  //     const response = await fetch('http://localhost:5000/play', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({ player_choice: playerChoice }),
-  //     })
-     
-
-  //     const data: GameResult = await response.json()
-  //     setComputerChoice(data.computer_choice);
-  //     setResult(data);
-  //   } catch (error) {
-  //     console.error('Error while fetching data:', error);
-  //   }
-  // };
- 
-
   const [gameId, setGameId] = useState<string | null>(null);
   const [playerChoice, setPlayerChoice] = useState<string>('');
   const [result, setResult] = useState<GameResult | null>(null);
@@ -99,37 +75,11 @@ const LandingPage: React.FC = () => {
       
       {user != null ? (
         <div>
-              <h1>Rock Paper Scissors Game</h1>
-        <button onClick={startNewGame}>Start New Game</button>
+              <header><h1>Rock👊🏾, Paper🖐🏾, Scissors✌🏾</h1></header>
+          {/* <button id="start-new-game" onClick={startNewGame}>Start New Game</button> */}
         {gameId && (
           <div>
-            <h2>Game ID: {gameId}</h2>
-            <label>
-              Choose your move:
-              <select
-                value={playerChoice}
-                onChange={(e) => setPlayerChoice(e.target.value)}
-              >
-                <option value="">-- Select --</option>
-                <option value="rock">Rock</option>
-                <option value="paper">Paper</option>
-                <option value="scissors">Scissors</option>
-              </select>
-            </label>
-            <button onClick={playRound}>Play Round</button>
-          </div>
-        )}
-        {result && (
-          <div>
-            <h2>Result:</h2>
-            <p>Your choice: {result.player_choice}</p>
-            <p>Computer's choice: {computerChoice}</p>
-            <p>{result.result}</p>
-          </div>
-        )}
-          {/* <h1>Welcome to the Game!</h1>
-            <header><h1>Rock👊🏾, Paper🖐🏾, Scissors✌🏾</h1></header>
-          <section className="scoreboard">
+            <section className="scoreboard">
           <div className="player-score">
             <p className="player">PLAYER</p>
             <p className="score-human">0</p>
@@ -139,84 +89,80 @@ const LandingPage: React.FC = () => {
             <p className="score-computer">0</p>
           </div>
           </section>
-
-          <section className="game-board-container">
-          <div className="game-board">
-            <div className="player-choose">
-              <p className="player">PLAYER</p>
-              <div className="circle">
-              <button className="btn game-button">
-                <img src="../assets/spongebob.png" alt=""></img>
-              </button>
-            </div>
-            </div>
-          </div>
-          <img src="../assets/verses.png" alt=""></img>
-          <div className="computer-choose">
-            <p className="computer">COMPUTER</p>
-            <div className="circle">
-              <button className="btn game-button">
-                <img src="../assets/patrick.png" alt=""></img>
-              </button>
-            </div>
-          </div>
-          </section>
-
           <section className="game-play">
-          <p className="win-condition">THE LUCKY ONE WINS😊</p>
-          
-          <p className="choose-option">Choose an option:</p>
-          <div className="buttons-container">
-            <div className="button-container" data-value="ROCK">
-              <button className="btn game-button" onClick={() => setPlayerChoice('rock')}>
-                {/* <img src="../assets/rock.png" alt="rock_button"></img> */}
-                {/* Rock👊🏾
-              </button>
+              <p className="choose-option">Choose an option: THE LUCKY ONE WINS😊</p>
+             <div className="selections">
+              <p className="player">PLAYER</p>
+              <p className="computer">COMPUTER</p>
+             </div>
+          </section>
+            <div className="move-container">
+              {/* <p>Player</p> */}
+              <div id="player-choice" data-value="ROCK">
+                <input type="button"  className="btn game-button" value={playerChoice} onChange={(e) => setPlayerChoice(e.target.value)}/>            
+              </div>
+              {/* <p>Computer</p> */}
+              <div id="computer-choice" data-value="SCISSORS">
+                <button className="btn game-button" onClick={() => setComputerChoice(computerChoice)}>
+                  {/* <img src="../assets/scissors.png" alt="scissors_button" data-value="SCISSORS"></img>  */}
+                  {computerChoice}
+                </button>
+              </div>
             </div>
-            <div className="button-container" data-value="PAPER">
-              <button className="btn game-button" onClick={() => setPlayerChoice('paper')}>
-                {/* <img src="../assets/paper.png" alt="paper_button" data-value="PAPER"></img> */}
-              {/*  Paper🖐🏾
-              </button>
+            <div className="buttons-container">
+              
+              <div className="button-container" data-value="ROCK">
+                <button className="btn game-button" onClick={() => setPlayerChoice('rock')}>
+                   <img src="https://imageio.forbes.com/specials-images/imageserve/dv424076/Boulder--Namibia--Africa/960x0.jpg?format=jpg&width=960" 
+                   alt="rock_button" 
+                   data-value="Rock"></img>  
+                </button>
+              </div>
+              <div className="button-container" data-value="PAPER">
+                <button className="btn game-button" onClick={() => setPlayerChoice('paper')}>
+                  <img src="https://www.plannettech.co.ke/wp-content/uploads/2020/11/9-1-2-x-11-15lb-blank-carbonless-continuous-computer-paper-3400-case-2-ply-image-1.webp" 
+                  alt="paper_button" 
+                  data-value="PAPER"></img>  
+                </button>
+              </div>
+              <div className="button-container" data-value="SCISSORS">
+                <button className="btn game-button" onClick={() => setPlayerChoice('scissors')}>
+                  <img src="https://m.media-amazon.com/images/I/310yF45fAFL._AC_UF894,1000_QL80_.jpg" 
+                  alt="scissors_button" 
+                  data-value="SCISSORS"></img>  
+                </button>
+              </div>
             </div>
-            <div className="button-container" data-value="SCISSORS">
-              <button className="btn game-button" onClick={() => setPlayerChoice('scissors')}>
-                {/* <img src="../assets/scissors.png" alt="scissors_button" data-value="SCISSORS"></img> */}
-               {/*} Scissors✌🏾
-              </button>
-            </div>
+            <button id="play-round" onClick={playRound}>Play Round</button>
           </div>
-          </section> 
-               {result && (
-          <div className="round-results">
-            <p className="result-human">Your choice: {result.player_choice}</p>
-            <p className="result-computer">Computer's choice: {computerChoice}</p>
-            <p className="result-round"></p>
-            <p className="final-result">{result.result}</p>
-            <button className="btn new-game-button" onClick={startNewGame}>New Game</button>
-            <button className="btn new-game-button" onClick={playRound}>New Game</button>
-
-          </div>      
-               ) } */}
-          <button id="logout" type="button" className="btn btn-primary btn-lg" onClick={logoutUser}>Logout</button> 
+        )}
+        {result && (
+          <div>
+            <div className="content">
+              <p>Your choice: {result.player_choice}</p>
+              <p>Computer's choice: {computerChoice}</p>
+            </div>
+            <h2> {result.result}</h2>
+          </div>
+        )}
+         
+          
+          <div className="controllers">
+             <div id="start-new-game"> <button type="button" className="btn btn-primary btn-lg" onClick={startNewGame}>Start New Game</button> </div>
+             <div id="logout"> <button type="button" className="btn btn-primary btn-lg" onClick={logoutUser}>Logout</button> </div>
+          </div>
+          
         </div> 
       ) : (
-
-        <div className="log-ons">
-          <h1>You are not logged in</h1>
+        <div className="intro">
+          <p>You are not logged in!</p>
           <div>
-            <div>
             <a href="/login">
-              <button className="button1">Login</button>
+              <button className="login-button">Login</button>
             </a>
-            </div>
-
-            <div>
             <a href="/register">
-              <button className="button2">Register</button>
+              <button className="register-button">Register</button>
             </a>
-            </div>
-
           </div>
         </div>
       )}

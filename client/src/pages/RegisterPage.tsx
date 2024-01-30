@@ -22,8 +22,8 @@ const RegisterPage: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Create an account</h1>
+    <div className="intro">
+      <p>Create an account</p>
       <form>
         <div>
           <label>Email: </label>
@@ -31,7 +31,7 @@ const RegisterPage: React.FC = () => {
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            id=""
+            className="email"
           />
         </div>
         <div>
@@ -40,11 +40,11 @@ const RegisterPage: React.FC = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            id=""
+            className="password"
           />
         </div>
-        <button type="button" onClick={() => registerUser()}>
-          Submit
+        <button className="login-button" type="button" onClick={() => registerUser()}>
+          Register
         </button>
       </form>
     </div>
