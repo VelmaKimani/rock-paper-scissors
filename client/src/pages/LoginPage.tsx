@@ -26,9 +26,10 @@ const LoginPage: React.FC = () => {
   return (
     <div className="intro">
       <p>Log Into Your Account</p>
+      <br></br>
       <form>
         <div>
-          <label>Email: </label>
+          <p>Email </p>
           <input
             type="text"
             value={email}
@@ -36,8 +37,9 @@ const LoginPage: React.FC = () => {
             className="email"
           />
         </div>
+        <br></br>
         <div>
-          <label>Password: </label>
+          <p>Password </p>
           <input
             type="password"
             value={password}

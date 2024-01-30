@@ -79,16 +79,7 @@ const LandingPage: React.FC = () => {
           {/* <button id="start-new-game" onClick={startNewGame}>Start New Game</button> */}
         {gameId && (
           <div>
-            <section className="scoreboard">
-          <div className="player-score">
-            <p className="player">PLAYER</p>
-            <p className="score-human">0</p>
-          </div>
-          <div className="computer-score">
-            <p className="computer">COMPUTER</p>
-            <p className="score-computer">0</p>
-          </div>
-          </section>
+            
           <section className="game-play">
               <p className="choose-option">Choose an option: THE LUCKY ONE WINS😊</p>
              <div className="selections">
@@ -99,7 +90,7 @@ const LandingPage: React.FC = () => {
             <div className="move-container">
               {/* <p>Player</p> */}
               <div id="player-choice" data-value="ROCK">
-                <input type="button"  className="btn game-button" value={playerChoice} onChange={(e) => setPlayerChoice(e.target.value)}/>            
+                <input type="button"  className="btn game-button round-6" value={playerChoice} onChange={(e) => setPlayerChoice(e.target.value)}/>            
               </div>
               {/* <p>Computer</p> */}
               <div id="computer-choice" data-value="SCISSORS">
@@ -113,23 +104,26 @@ const LandingPage: React.FC = () => {
               
               <div className="button-container" data-value="ROCK">
                 <button className="btn game-button" onClick={() => setPlayerChoice('rock')}>
-                   <img src="https://imageio.forbes.com/specials-images/imageserve/dv424076/Boulder--Namibia--Africa/960x0.jpg?format=jpg&width=960" 
+                   {/* <img src="https://imageio.forbes.com/specials-images/imageserve/dv424076/Boulder--Namibia--Africa/960x0.jpg?format=jpg&width=960" 
                    alt="rock_button" 
-                   data-value="Rock"></img>  
+                   data-value="Rock"></img>   */}
+                   Rock👊🏾
                 </button>
               </div>
               <div className="button-container" data-value="PAPER">
                 <button className="btn game-button" onClick={() => setPlayerChoice('paper')}>
-                  <img src="https://www.plannettech.co.ke/wp-content/uploads/2020/11/9-1-2-x-11-15lb-blank-carbonless-continuous-computer-paper-3400-case-2-ply-image-1.webp" 
+                  {/* <img src="https://www.plannettech.co.ke/wp-content/uploads/2020/11/9-1-2-x-11-15lb-blank-carbonless-continuous-computer-paper-3400-case-2-ply-image-1.webp" 
                   alt="paper_button" 
-                  data-value="PAPER"></img>  
+                  data-value="PAPER"></img>   */}
+                  Paper🖐🏾
                 </button>
               </div>
               <div className="button-container" data-value="SCISSORS">
                 <button className="btn game-button" onClick={() => setPlayerChoice('scissors')}>
-                  <img src="https://m.media-amazon.com/images/I/310yF45fAFL._AC_UF894,1000_QL80_.jpg" 
+                  {/* <img src="https://m.media-amazon.com/images/I/310yF45fAFL._AC_UF894,1000_QL80_.jpg" 
                   alt="scissors_button" 
-                  data-value="SCISSORS"></img>  
+                  data-value="SCISSORS"></img>   */}
+                  Scissors✌🏾
                 </button>
               </div>
             </div>
@@ -160,6 +154,7 @@ const LandingPage: React.FC = () => {
             <a href="/login">
               <button className="login-button">Login</button>
             </a>
+            <br></br>
             <a href="/register">
               <button className="register-button">Register</button>
             </a>

@@ -7,8 +7,10 @@
   }
 
   body {
-    background-color: purple;
+    background-color: rgb(240, 231, 231);
     max-height: 100vh;
+    color: #000;
+    
   }
 
   header {
@@ -17,30 +19,16 @@
   }
 
   h1 {
-    color: #f9f6f6;
+    color: black;
     text-align: center;
   }
   h2 {
-    color: #f9f6f6;
+    color: black;
     text-align: center;
   }
   h3 {
-    color: #f9f6f6;
+    color: black;
     text-align: center;
-  }
-
-  .scoreboard {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-    background-color: #014689;
-    height: 150px;
-    width: 400px;
-    margin: 0 auto;
-    border: 4px solid #f3ffff;
-    border-radius: 20px;
-    margin-top: 20px;
   }
  
   .player-score,
@@ -54,10 +42,10 @@
 
   .player,
   .computer {
-    color: #e4f5f5;
+    color: black;
     font-weight: bold;
     font-size: 25px;
-    text-decoration: underline #f3ffff;
+    text-decoration: underline black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +54,7 @@
   .score-computer,
   .score-human {
     background-color: #000;
-    border: 4px solid #f3ffff;
+    border: 4px solid black;
     border-radius: 10px;
     color: #ea4225;
     font-family: 'Seven Segment', sans-serif;
@@ -78,7 +66,7 @@
   }
 
 
-  .game-board-container {
+  /* .game-board-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,10 +88,10 @@
     font-weight: bold;
     font-size: 25px;
     text-decoration: underline #ffd700;
-  }
+  } */
 
   .circle {
-    background-color: #f2f6f9;
+    background-color: black;
     border: 3px solid #920404;
     border-radius: 50%;
     height: 150px;
@@ -111,31 +99,15 @@
     margin-top: 10px;
   }
 
-  .image-container {
-    background-repeat: no-repeat;
-    background-size: 60% 60%;
-    background-position: center;
-    height: 50%;
-    width: 50%;
-  }
-
-  .vs-image {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    height: 200px;
-    width: 200px;
-  }
-
   .game-play p {
     font-family: 'Proxima Nova', sans-serif;
     font-weight: bold;
     text-align: center;
-    color: #f5f4f4;
+    color: black;
   }
 
   .round-results {
-    color: #f3ffff;
+    color: black;
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -158,24 +130,24 @@
   } 
 
   .button-container {
-    background-color: #014689;
-    width: 55px;
+    background-color: rgb(204, 199, 199);
+    width: 150px;
     height: 50px;
     padding: 10px;
     margin-left: 20px;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
     
   }
 
   .btn {
     background: none;
     border: 0;
-    color: #f3ffff;
+    color: black;
     cursor: pointer;
     font: inherit;
     font-weight: bold;
@@ -213,7 +185,7 @@
   }
 
   #play-round {
-    background-color: white;
+    background-color: rgb(182, 178, 178);
     border-radius: 5px;
     width: 130px;
     height: 40px;
@@ -238,8 +210,8 @@
   }
 
   #player-choice {
-    background-color: rgb(212, 152, 38);
-    border-radius: 5px;
+    background-color: rgb(212, 202, 202);
+    border-radius: 50%;
     width: 130px;
     height: 40px;
     cursor: pointer;
@@ -247,8 +219,8 @@
   }
 
   #computer-choice {
-    background-color:  rgb(212, 152, 38);
-    border-radius: 5px;
+    background-color:  rgb(212, 202, 202);
+    border-radius: 50%;
     width: 130px;
     height: 40px;
     cursor: pointer;
@@ -265,7 +237,6 @@
   .content {
     margin-left: 45%;
     font-size: large;
-    color: white;
     margin-bottom: 10px;
     font-size: x-large;
     margin-top: 10px;
@@ -279,7 +250,7 @@
   } 
 
   #start-new-game {
-      background-color: green;
+      background-color: rgb(93, 219, 93);
       border-radius: 5px;
       width: 150px;
       height: 40px;
@@ -287,7 +258,7 @@
     }
 
   #logout {
-    background-color: red;
+    background-color: rgb(196, 74, 74);
     position: absolute;
     height: 40px;
     width: 150px;
@@ -302,7 +273,6 @@
   }
 
   .rock{
-    background-image:url('http://placekitten.com/g/200/300');
     background-size:cover;
 
   }
@@ -316,48 +286,51 @@
 
   .intro {
   margin-top: 15%;
-  margin-left: 38%;
-  font-size: 40px;
+  margin-bottom: 15%;
+  margin-left: 42%;
+  font-size: 20px;
   }
 
   .login-button {
+  background-color: rgb(192, 188, 188);
+  border-radius: 50px;
   margin-top: 20px;
-  width: 100px;
+  width: 120px;
   height: 40px;
   font-size: 20px;
   margin-left: 40px;
   }
   .register-button {
+    background-color: rgb(192, 188, 188);
+    border-radius: 50px;
     margin-top: 20px;
-    width: 100px;
+    width: 120px;
     height: 40px;
     font-size: 20px;
-    margin-left: 80px;
+    margin-left: 40px;
   }
   .email {
     height: 40px;
-    font-size: 20px;
+    font-size: 15px;
     padding-left: 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    resize: none;
+    width: 37%;
   }
   .password {
     height: 40px;
-    font-size: 20px;
+    font-size: 15px;
     padding-left: 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    resize: none;
+    width: 37%;
   }
   .computer {
     margin-left: 30px;
   }
-
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
